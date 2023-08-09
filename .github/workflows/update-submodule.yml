@@ -10,6 +10,6 @@ jobs:
     - name: Repository Dispatch to parent repo
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.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 }}
+        token: ${{ secrets.PARENT_REPO_TOKEN }}
         repository: Jesse-Xu615/Test-repo-main
         event-type: submodule-update

@@ -1,0 +1,15 @@
+name: Trigger submodule update
+
+on: [push]
+
+jobs:
+  notifyUpdate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repository Dispatch to parent repo
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.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 }}
+        repository: Jesse-Xu615/Test-repo-main
+        event-type: submodule-update
